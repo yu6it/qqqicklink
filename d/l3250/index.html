@@ -3,6 +3,28 @@
     <meta http-equiv="refresh" content="1;url=https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47471">
   </head>
   <body>
-    <a href="https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47471"><h1>点击跳转</h1></a>
+    <h1>请选择系统类型</h1>
+    <a href="https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47472"><h1>32位</h1></a>
+    <a href="https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47471"><h1>64位</h1></a>
+    <script>
+    var agent = navigator.userAgent.toLowerCase();
+      var isMac = function () {
+        return /macintosh|mac os x/i.test(navigator.userAgent);
+      }();
+      if (agent.indexOf("win32") >= 0 || agent.indexOf("wow32") >= 0) {
+        alert("检测到您的系统位32位，请选择32位");
+        setTimeout(function () {
+              window.location.href = 'https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47472';
+            }, 5000);
+      } else if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
+        alert("检测到您的系统位64位，请选择64位");
+        setTimeout(function () {
+              window.location.href = 'https://www.epson.com.cn/Apps/tech_support/GuideDriveContent.aspx?ColumnId=32100&ArticleId=47471';
+            }, 5000);
+      }
+      if (isMac) {
+        alert("本站暂不提供任何苹果系统驱动");
+      }
+     </script>
   </body>
 </html>
